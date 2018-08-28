@@ -1,4 +1,4 @@
-package com.javartisan.cache;
+package com.javartisan.data.structure.map;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -251,3 +251,4 @@ class Main {
 
     }
 }
+
