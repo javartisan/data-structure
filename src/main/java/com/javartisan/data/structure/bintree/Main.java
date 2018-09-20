@@ -42,8 +42,7 @@ public class Main {
             node = stack.peek();
             // 右节点不空而且没有遍历过则添加到队列中
             if (Objects.nonNull(node.right) && !visited.contains(node.right)) {
-                node = stack.peek().right;
-                stack.push(node);
+                stack.push(node.right);
                 // 此时可以将右节点看做一颗子树，从新开始以后序遍历的方式遍历该子树
                 continue;
             }
