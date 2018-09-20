@@ -41,11 +41,13 @@ public class QuickSortor {
         int e = nums[start];
         while (start < end) {
             // end向前寻找，寻找到之后交换
+            // end < start 不能有等于号，否则swap时可能越界(在数组边界时候)。
             while (nums[end] >= e && end > start)
                 end--;
             Utils.swap(nums, end, start);
 
             //后面寻找之后从前向后寻找交换
+            // end < start 不能有等于号，否则swap时可能越界(在数组边界时候)。
             while (nums[start] <= e && start < end)
                 start++;
             Utils.swap(nums, end, start);
